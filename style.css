@@ -1,0 +1,153 @@
+body {
+  background: linear-gradient(to right, #ffe0e9, #fad0c4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  padding: 2em;
+  max-width: auto;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  font-size: 1.3em;
+  margin-bottom: 1.5em;
+}
+
+
+audio {
+  margin-bottom: 1.5em;
+}
+
+button {
+  padding: 1em 2em;
+  font-size: 1em;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4e73;
+}
+
+#countdown {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+
+
+.res {
+  display: block;
+}
+
+.res1{
+  display: inline-block;
+}
+img{
+   width: 250px;
+  height: 187px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 1.5em;
+}
+
+
+.heart {
+  position: fixed;
+  font-size: 2rem;
+  animation: fall 5s linear forwards;
+}
+@keyframes fall {
+  0% { top: -50px; opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+
+
+
+.square-photo {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin: 10px;
+margin-left: 50px;
+  transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.square-photo1 {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+
+}
+
+.square-photo1:hover {
+  transform: rotate(3deg) scale(1.05);
+}
+.square-photo:hover {
+  transform: rotate(3deg) scale(1.05);
+}
+
+
+
+
+.foto{
+
+  width: 250px;
+ margin-top: -620px;
+}
+
+
+.resimler{
+
+margin-left: 1200px;
+width: 250px;
+margin-top: -1560px;
+}
+
+.container .write {
+  width: 300px;
+  margin: 0 auto;    /* yatayda ortalar */
+}
+
+.background-heart {
+  position: fixed;
+  top: -30px;               /* başlangıç yukarıdan gelsin */
+  font-size: 2rem;
+  opacity: 0.3;             /* çok boğmasın */
+  animation: fallHearts linear forwards;
+  z-index: -1;              /* sayfa içeriğinin arkasında kalsın */
+  pointer-events: none;     /* tıklamayı engellemesin */
+}
+
+@keyframes fallHearts {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(110vh); }   /* ekranın altına kadar */
+}
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İyi ki Doğdun Aşkım!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.0/tsparticles.bundle.min.js"></script>
+</head>
+
+
+
+
+<body>
+  <a href="ani.html" target="_blank">anı gazetesi</a>
+ <a href="gazete.html" target="_blank">gazete</a>
+
+  <div class="container">
+<h2>🎁 Doğum Gününe Kalan Süre:</h2>
+  <div id="countdown"></div>
+
+  <script>
+    const birthday = new Date("July 5, 2025 00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "🎉 Doğum günü kutlu olsun aşkım!";
+
+        // Konfeti patlaması
+        confetti({
+          particleCount: 800,
+          spread: 120,
+          origin: { y: 0.6 },
+        });
+
+        // Kalp yağmuru
+        const heartInterval = setInterval(() => {
+          const heart = document.createElement("div");
+          heart.classList.add("heart");
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.textContent = "❤️";
+          document.body.appendChild(heart);
+          setTimeout(() => heart.remove(), 5000);
+        }, 200);
+
+        setTimeout(() => clearInterval(heartInterval), 5000);
+
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days} gün ${hours} saat ${minutes} dakika ${seconds} saniye`;
+    }, 1000);
+  </script>
+
+
+
+
+
+    <h1>🎉 İyi ki Doğdun Aşkım! 🎂</h1>
+    <p>Seninle geçirdiğim her an bir hediye. Bu sayfa kalbim gibi sadece sana özel 💖</p>
+
+
+
+
+    
+    
+    
+    
+
+<br>
+    <button onclick="alert('Seni çok seviyorum! 💘')">Tıkla ve Sürpriz!</button>
+    <br><br><br><br><br>
+ 
+  <p class="write">Benim güzel sevgilim benim hayatıma ışığım olarak girdiğin günden beri benim yolumu sen aydınlatıyorsun sen
+  </p>
+
+
+  </div>
+<div class="foto">
+    <div class="square-photo" style="background-image: url('fesim/77dbbce1-8fcc-42f5-b1e0-80dafb7379a3.png');"></div>
+    <div class="square-photo" style="background-image: url('fesim/dijatl.png');"></div>
+    <div class="square-photo" style="background-image: url('fesim/konser.jpg');"></div>
+    <div class="square-photo" style="background-image: url('fesim/ayna.png');"></div>
+    <div class="square-photo" style="background-image: url('fesim/önce.png');"></div>
+    <div class="square-photo" style="background-image: url('fesim/resim1.jpg');"></div>
+
+ </div>
+    <div class="resimler">
+    <div class="square-photo1" style="background-image: url('fesim/ChatGPT\ Image\ 4\ Tem\ 2025\ 15_46_53.png');"></div>
+    <div class="square-photo1" style="background-image: url('fesim/52226afe-a712-424f-ab39-997a648fdc7a.png');"></div>
+    <div class="square-photo1" style="background-image: url('fesim/aynen.jpg');"></div>
+    <div class="square-photo1" style="background-image: url('fesim/karak.png');"></div>
+    <div class="square-photo1" style="background-image: url('fesim/dij.png');"></div>
+    <div class="square-photo1" style="background-image: url('fesim/resim4.jpg');"></div>
+</div>
+    
+<script>
+  // 500 milisaniyede bir kalp oluştur
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("background-heart");
+
+    // ekrana rastgele bir yatay pozisyonda gelsin
+    heart.style.left = Math.random() * 100 + "vw";
+
+    // farklı hızlarda düşsün diye animasyon süresini rastgele ver
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // 2-5 saniye
+
+    // kalbin kendisi
+    heart.textContent = "❤️";
+
+    // body’ye ekle
+    document.body.appendChild(heart);
+
+    // kalbi 5 saniye sonra kaldır (hafızada kalmasın)
+    setTimeout(() => heart.remove(), 5000);
+  }, 500);
+</script>
+
+
+</body>
+</html>
+
+
+
+
